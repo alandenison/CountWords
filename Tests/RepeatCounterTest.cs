@@ -14,5 +14,13 @@ namespace Counter.Objects
       int result = testCounter.CountRepeats();
       Assert.Equal(methodResult, result);
     }
+    [Fact]
+    public void CountRepeats_CheckHowManyInstancesAreInString()
+    {
+      int methodResult = 2;
+      RepeatCounter testCounter = new RepeatCounter("duck duck goose", "duck");
+      int result = testCounter.CountRepeats();
+      Assert.Equal(methodResult, result);
+    }
   }
 }
