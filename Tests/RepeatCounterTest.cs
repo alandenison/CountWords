@@ -1,0 +1,18 @@
+
+using Xunit;
+using System;
+
+namespace Counter.Objects
+{
+  public class RepeatCounterTest
+  {
+    [Fact]
+    public void CountRepeats_CheckIfContains()
+    {
+      int methodResult = 1;
+      RepeatCounter testCounter = new RepeatCounter("duck", "duck");
+      int result = testCounter.CountRepeats();
+      Assert.Equal(methodResult, result);
+    }
+  }
+}
