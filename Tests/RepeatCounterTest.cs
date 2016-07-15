@@ -30,5 +30,13 @@ namespace Counter.Objects
       int result = testCounter.CountRepeats();
       Assert.Equal(methodResult, result);
     }
+    [Fact]
+    public void CountRepeats_IgnorePartialMatchesInWordsWHenSearching()
+    {
+      int methodResult = 1;
+      RepeatCounter testCounter = new RepeatCounter("Duckworth the duck", "Duck");
+      int result = testCounter.CountRepeats();
+      Assert.Equal(methodResult, result);
+    }
   }
 }

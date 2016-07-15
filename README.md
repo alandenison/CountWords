@@ -17,8 +17,12 @@ It should count all instances of the words found, now that we can tell if the ph
   input "duck duck goose", "duck"
   output "2"
 
-It should ignore case when searching for words
+It should ignore case when searching for words:
   input "duck", "Duck"
+  output "1"
+
+It should ignore partial word matches when searching for words:
+  input "Duckworth the duck"
   output "1"
 
 ## Setup/Installation Requirements
