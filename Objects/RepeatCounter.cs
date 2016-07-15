@@ -5,8 +5,8 @@ namespace Counter.Objects
 {
   public class RepeatCounter
   {
-    public string _inputSentence;
-    public string _inputSearch;
+    private string _inputSentence;
+    private string _inputSearch;
 
     public RepeatCounter(string inputSentence, string inputSearch)
     {
@@ -34,9 +34,10 @@ namespace Counter.Objects
     public int CountRepeats()
     {
       string sentence = _inputSentence.ToLower();
+      string search = _inputSearch.ToLower();
       int sentenceCount = sentence.Length;
-      int afterLength = sentence.Replace(_inputSearch, "").Length;
-      return (sentenceCount-afterLength)/_inputSearch.Length;
+      int afterLength = sentence.Replace(search, "").Length;
+      return (sentenceCount-afterLength)/search.Length;
     }
   }
 }

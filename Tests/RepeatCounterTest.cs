@@ -22,5 +22,13 @@ namespace Counter.Objects
       int result = testCounter.CountRepeats();
       Assert.Equal(methodResult, result);
     }
+    [Fact]
+    public void CountRepeats_IgnoreCaseWHenSearching()
+    {
+      int methodResult = 1;
+      RepeatCounter testCounter = new RepeatCounter("duck", "Duck");
+      int result = testCounter.CountRepeats();
+      Assert.Equal(methodResult, result);
+    }
   }
 }

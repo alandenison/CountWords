@@ -11,11 +11,15 @@ specs:
 
 it should find if a word exists in a phrase, this is done first to make sure it can search for multiple words eventually:
   input: "duck", "duck"
-  output: "true"
+  output: "1"
 
 It should count all instances of the words found, now that we can tell if the phrase does contain the word:
   input "duck duck goose", "duck"
   output "2"
+
+It should ignore case when searching for words
+  input "duck", "Duck"
+  output "1"
 
 ## Setup/Installation Requirements
 Instructions for Windows PC.
