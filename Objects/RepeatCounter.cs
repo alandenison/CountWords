@@ -33,11 +33,7 @@ namespace Counter.Objects
 
     public int CountRepeats()
     {
-      string sentence = (_inputSentence.ToLower() + " ");
-      string search = (_inputSearch.ToLower() + " ");
-      int sentenceCount = sentence.Length;
-      int afterLength = sentence.Replace(search, "").Length;
-      return (sentenceCount-afterLength)/search.Length;
+      return ((_inputSentence.Replace(" ", "").Length) - ((" " + _inputSentence.Replace(" ", "  ") + " ")).Replace((" " + _inputSearch.ToLower() + " "), "").Replace(" ", "").Length)/_inputSearch.Length;
     }
   }
 }
