@@ -33,7 +33,7 @@ namespace Counter.Objects
 
     public int CountRepeats()
     {
-      return ((_inputSentence.Replace(" ", "").Length) - ((" " + _inputSentence.Replace(" ", "  ") + " ")).Replace((" " + _inputSearch.ToLower() + " "), "").Replace(" ", "").Length)/_inputSearch.Length;
+      return ((_inputSentence.Replace(" ", "").Length) - ((" " + _inputSentence.ToLower().Replace(" ", "  ") + " ")).Replace((" " + _inputSearch.ToLower() + " "), "").Replace(" ", "").Length)/_inputSearch.Length;
     }
   }
 }

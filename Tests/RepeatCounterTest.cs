@@ -26,7 +26,7 @@ namespace Counter.Objects
     public void CountRepeats_IgnoreCaseWHenSearching()
     {
       int methodResult = 1;
-      RepeatCounter testCounter = new RepeatCounter("duck", "Duck");
+      RepeatCounter testCounter = new RepeatCounter("Duck", "duck");
       int result = testCounter.CountRepeats();
       Assert.Equal(methodResult, result);
     }
