@@ -21,9 +21,13 @@ It should ignore case when searching for words:
   input "duck", "Duck"
   output "1"
 
-It should ignore partial word matches when searching for words:
-  input "Duckworth the duck"
+It should ignore partial word matches when searching for words that begin with the searched phrase:
+  input "Duckworth the duck", "duck"
   output "1"
+
+It should ignore all partial word matches:
+  input "goose the mongoose", "goose"
+  output: "1"
 
 ## Setup/Installation Requirements
 Instructions for Windows PC.
